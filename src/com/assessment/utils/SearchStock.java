@@ -31,8 +31,13 @@ public class SearchStock {
 				isAvailble=true;
 			}
 			
-			if (left==mid || !isAvailble)
+			if (!isAvailble) {
+				for (int i=0;i<stock.length;i++) {
+					if(key==stock[i].getStockPrice()) return i;
+				}
 				return -1;
+			}
+				
 
 		}while(left<=right);
 
