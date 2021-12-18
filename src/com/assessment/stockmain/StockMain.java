@@ -32,8 +32,7 @@ public class StockMain {
 
 			do {
 				
-				stockDetails.getStockDetails();
-				
+							
 				System.out.println("\r\n"
 						+ "-----------------------------------------------\r\n"
 						+ "Enter the operation that you want to perform\r\n"
