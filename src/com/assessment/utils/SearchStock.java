@@ -11,8 +11,6 @@ public class SearchStock {
 		int mid=(left+right)/2;
 		boolean isAvailble=false;
 
-		if (key==stock[left].getStockPrice())
-			return left;
 		do
 		{
 			if(left>right || mid>right) {
