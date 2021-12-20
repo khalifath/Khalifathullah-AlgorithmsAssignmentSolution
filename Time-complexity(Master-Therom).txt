@@ -1,0 +1,7 @@
+T (n) = 3T (n/2) + n  -> O(n)
+
+T (n) = 64T (n/8) − n^2(log n) -> O( n2log 1/n)
+
+T (n) = 3T (n/3) + n/2  -> O(nlogn)
+
+T (n) = 7T (n/3) + n^2 ->O(n^3)
