@@ -15,27 +15,36 @@ public class SearchStock {
 			do
 			{
 				
-				if(key==stock[left].getStockPrice()) return left;
-				if(key==stock[mid].getStockPrice()) return mid;
-				if(key==stock[right].getStockPrice()) return right;
-
+		
 				if(left>=right || mid>=right) {
 					return -1;
 				}
+				isAvailble = false;
 				
 				if ((key>stock[left].getStockPrice() && key<stock[mid].getStockPrice()) || (key<stock[left].getStockPrice() && key>stock[mid].getStockPrice())) {
 					right=mid;
 					mid = (left+right)/2;
 					isAvailble=true;
+					if(right==mid && mid==left+1)
+						isAvailble=false;
 				}else if(key<stock[mid].getStockPrice() && key>stock[right].getStockPrice() ||(key<stock[mid].getStockPrice() && key<stock[right].getStockPrice())){
 					left=mid;
 					mid = (left+right)/2;
 					isAvailble=true;
+					if(left==mid && mid==right-1)
+						isAvailble=false;
 				}
 
+				if(key==stock[left].getStockPrice()) return left;
+				if(key==stock[mid].getStockPrice()) return mid;
+				if(key==stock[right].getStockPrice()) return right;
 				if (!isAvailble) {
 					for (int i=0;i<stock.length;i++) {
-						if(key==stock[i].getStockPrice()) return i;
+					
+						if(key==stock[i].getStockPrice()) {
+							//System.out.println("Liner search...");
+							return i;
+						}
 					}
 					return -1;
 				}

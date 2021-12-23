@@ -31,8 +31,8 @@ public class StockMain {
 			}
 
 			do {
-				
-							
+
+
 				System.out.println("\r\n"
 						+ "-----------------------------------------------\r\n"
 						+ "Enter the operation that you want to perform\r\n"
@@ -74,17 +74,19 @@ public class StockMain {
 				case 6:
 					flag=false;
 					System.out.println("Exited successfully");
+					break;
 				default:
-					sc.close();
-					System.exit(0);
+					System.out.println("Invalid Input.. ");
+					break;
 				}
 			}while (flag==true);
-			
+
 		}catch (InputMismatchException e) {
 			System.out.println("Invalid option... Please re-execute the program, exiting!!! "); 
 			//e.printStackTrace();
 			sc.close();
 			System.exit(0);
 		}
+		sc.close();
 	}
 }
