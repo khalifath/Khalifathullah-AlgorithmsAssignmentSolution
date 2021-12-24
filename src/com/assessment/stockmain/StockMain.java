@@ -71,7 +71,7 @@ public class StockMain {
 						System.out.println("Value not found");
 					}
 					break;
-				case 6:
+				case 0:
 					flag=false;
 					System.out.println("Exited successfully");
 					break;
